@@ -1,4 +1,3 @@
-
 tarefas = []
 
 def adicionar_tarefa():
@@ -6,7 +5,7 @@ def adicionar_tarefa():
     tarefas.append({"tarefa": tarefa, "concluida": False})
     print("✅ Tarefa adicionada com sucesso!\n")
 
-def listar_tarefas():
+def mostrar_tarefas():
     if not tarefas:
         print("Nenhuma tarefa cadastrada.\n")
         return
@@ -26,7 +25,7 @@ def concluir_tarefa():
         print("Número inválido.\n")
 
 def excluir_tarefa():
-    listar_tarefas()
+    mostrar_tarefas()
     try:
         num = int(input("Digite o número da tarefa a excluir: "))
         tarefas.pop(num-1)
@@ -38,7 +37,7 @@ def menu():
     while True:
         print("==== GERENCIADOR DE TAREFAS ====")
         print("1. Adicionar tarefa")
-        print("2. Listar tarefas")
+        print("2. Mostrar tarefas")
         print("3. Concluir tarefa")
         print("4. Excluir tarefa")
         print("5. Sair")
@@ -47,7 +46,7 @@ def menu():
         if opcao == "1":
             adicionar_tarefa()
         elif opcao == "2":
-            listar_tarefas()
+            mostrar_tarefas()
         elif opcao == "3":
             concluir_tarefa()
         elif opcao == "4":
