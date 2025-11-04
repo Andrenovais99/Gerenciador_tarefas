@@ -107,7 +107,4 @@ if __name__ == "__main__":
     menu()
 
 
-# Ponto de entrada do programa
-# Garante que o menu só será executado se o arquivo for rodado diretamente
-if __name__ == "__main__":
-    menu()
+
